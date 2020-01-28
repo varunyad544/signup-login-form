@@ -114,11 +114,6 @@ function submitted(){
 		passwordElement.disabled = true;
 		confirmPasswordElement.disabled = true;
 		submitBtn.disabled= true;
-	
-		submitBtn.innerHTML = 'Submitting';
-		setTimeout(function(){ 
-			submitBtn.innerHTML = 'Submitted';
-		}, 1000);
 		
 		usernameElement.style.borderColor="";
 		phoneElement.style.borderColor="";
@@ -130,6 +125,8 @@ function submitted(){
 		emailElement.nextElementSibling.innerHTML="";
 		confirmPasswordElement.nextElementSibling.innerHTML="";
 		
+		submitBtn.innerHTML = 'Submitting';
+		
 		$.ajax({
 			type: 'POST',
 			async: false,
@@ -140,6 +137,8 @@ function submitted(){
 					pass: passwordElement.value},
 			success: function(response){
 				console.log(response);
+				submitBtn.innerHTML = 'Submitted';
+				
 			},
 			error: function(error){
 				console.log(error);
