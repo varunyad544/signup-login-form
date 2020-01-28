@@ -3,14 +3,14 @@
 $usernameFlag = false;
 $phoneFlag = false;
 $emailFlag = false;
-$passwordFlaf = false;
+$passwordFlag = false;
 
 $username = $_POST["username"];
 $phone = $_POST["phone"];
 $email = $_POST["email"];
-$password = $_POST["pass"];
+$pass = $_POST["pass"];
 
-if($username!="" and $phone!="" and $email!="" and $password!=""){
+if($username!="" and $phone!="" and $email!="" and $pass!=""){
 	$servername = "34.66.9.69";
 	$dbusername = "varun1";
 	$dbpassword = "Varun@123";
@@ -22,7 +22,7 @@ if($username!="" and $phone!="" and $email!="" and $password!=""){
 		die("Connection failed: " . $conn->connect_error);
 	}
 
-	$sql = "INSERT INTO users(username, phone, email, password) VALUES ('$username','$phone','$email','$password')";
+	$sql = "INSERT INTO users(username, phone, email, password) VALUES ('$username','$phone','$email','$pass')";
 
 	if ($conn->query($sql) === TRUE){
 		echo "New record created successfully";
