@@ -25,13 +25,13 @@ if($username!="" and $phone!="" and $email!="" and $pass!=""){
 	$sql = "INSERT INTO users(username, phone, email, password) VALUES ('$username','$phone','$email','$pass')";
 
 	if ($conn->query($sql) === TRUE){
-		echo "New record created successfully";
+		echo 1;
 	}else{
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 	$conn->close();
 }
 else{
-	echo "no record inserted.";	
+	echo 0;	
 }
 ?>
