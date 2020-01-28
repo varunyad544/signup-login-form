@@ -137,8 +137,9 @@ function submitted(){
 					pass: passwordElement.value},
 			success: function(response){
 				console.log(response);
-				submitBtn.innerHTML = 'Submitted';
-				
+				if(response==1){
+					submitBtn.innerHTML = 'Submitted';
+				}
 			},
 			error: function(error){
 				console.log(error);
