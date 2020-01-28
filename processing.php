@@ -8,9 +8,9 @@ $passwordFlag = false;
 $username = $_POST["username"];
 $phone = $_POST["phone"];
 $email = $_POST["email"];
-$pass = $_POST["pass"];
+$password = $_POST["pass"];
 
-if($username!="" and $phone!="" and $email!="" and $pass!=""){
+if($username!="" and $phone!="" and $email!="" and $password!=""){
 	$servername = "34.66.9.69";
 	$dbusername = "varun1";
 	$dbpassword = "Varun@123";
@@ -32,6 +32,6 @@ if($username!="" and $phone!="" and $email!="" and $pass!=""){
 	$conn->close();
 }
 else{
-	echo "no record inserted.";	
+	echo "no record inserted."	
 }
 ?>
