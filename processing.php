@@ -31,4 +31,7 @@ if($username!="" and $phone!="" and $email!="" and $password!=""){
 	}
 	$conn->close();
 }
+else{
+	echo "no record inserted."	
+}
 ?>
