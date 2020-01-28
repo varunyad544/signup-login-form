@@ -1,0 +1,222 @@
+@import url(https://fonts.googleapis.com/css?family=Lily+Script+One);
+
+html{
+	min-height: 100%;
+	box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+body{
+  background-image: url('https://www.imgbase.info/images/safe-wallpapers/photography/cityscape/50451_cityscape_skyscraper_skyscrapers_in_th_fog.jpg');
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.main-container{
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.side-black-box{
+	height: 450px;
+	margin-top: 20%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h2{
+	color:#c2c5cc;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 10px;
+	font-family:'Lily Script One', cursive;
+	font-size:40px;
+	font-weight:bold;
+}
+
+.welcome-text{
+	color: #c2c5cc;
+	text-align: center;
+}
+
+.form-container{
+	margin-top: 20%;
+	padding: 0px;
+	z-index: 999;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: rgba(255,255,255,0.2);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#login-btn, #signup-btn{
+	display: block;
+	height: 40px;
+	width: 100px;
+	padding: 5px;
+	background: none;
+	position: relative;
+	color: #c2c5cc;
+	font-size: 16px;
+	font-weight: bold;
+	border: solid #c2c5cc;
+	overflow: hidden;
+	outline: none;
+	cursor: pointer;
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	transition:         0.08s ease-in;
+	-o-transition:      0.08s ease-in;
+	-ms-transition:     0.08s ease-in;
+	-moz-transition:    0.08s ease-in;
+	-webkit-transition: 0.08s ease-in;
+}
+
+#login-btn:hover, #signup-btn:hover {
+  color: #fff;
+}
+
+#login-btn:before, #signup-btn:before {
+  content: "";
+  position: absolute;
+  background: #c2c5cc;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+}
+
+#login-btn:hover:before, #signup-btn:hover:before {
+  top: 0;
+}
+
+.active-button{
+	color: #fff !important;
+	background: #c2c5cc !important;
+}
+
+form{
+	min-height: 450px;
+	height: 100%;
+	padding: 20px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: rgba(255,255,255,0.2);
+}
+
+.signup-form{
+	display: none;
+}
+
+.warning{
+	color:#fff;
+	font-size:11px;
+	width: 84%;
+	text-align: right;
+	margin-left: 45px;
+	margin-bottom: 10px;
+}
+
+#login-username, #login-password, #username, #password, #email, #phone, #confirm-password{
+	display: inline-block;
+	color: #fff;
+	width: 84%;
+	padding: 10px;
+	font-size: 14px;
+	outline: none;
+	border: none;
+	border-bottom:2px solid #fff;
+	margin-left:25px;
+	margin-bottom: 20px;
+	margin-right: 0px;
+	background: none;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+.left-icon{
+	color: #fff;
+	height: 16px;
+	width: 16px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.fa-check-circle{
+	color: #0f0;
+}
+
+.fa-times-circle{
+	color: #f00;
+}
+
+.login-submit-btn, .signup-submit-btn{
+	width:40%;
+	border-radius: 5px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 50px;
+	margin-top: 25px;
+	font-size: 18px;
+	border: none;
+	font-weight: bold;
+	color: whitesmoke;
+	cursor: pointer;
+	background-color: #485461;
+	background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+	background-size: 200%;
+	transition: 0.5s;
+}
+
+.login-submit-btn:hover, .signup-submit-btn:hover{
+	background-position: right;
+}
+
+hr{
+	margin-top: 40px;
+}
+
+.google-button{
+  height: 40px;
+  width: 210px;
+  display: block;
+  border-width: 0;
+  background: #fff;
+  color: #737373;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.05);
+  padding: 0;
+}
+
+.google-button-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 2px 0 8px 8px;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+}
+
+.google-button-text {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 24px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.google-button:hover{
+  box-shadow: 1px 4px 5px 1px rgba(0, 0, 0, 0.1);
+}
