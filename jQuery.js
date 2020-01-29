@@ -15,3 +15,44 @@ $("#login-btn").on("click", function () {
     $(".login-form").slideUp(500);
     $(".signup-form").slideDown(500);
   });
+
+function signup(username,phone,email,pass){
+ $.ajax({
+			type: 'POST',
+			async: false,
+			url: 'http://34.66.9.69/signup-login-form/processing.php',
+			data: {username: username,
+					phone: phone,
+					email: email,
+					pass: pass},
+			success: function(response){
+				console.log(response);
+				if(response==1){
+					submitBtn.innerHTML = 'Submitted';
+				}
+			},
+			error: function(error){
+				console.log(error);
+			}
+		});   
+}
+
+function login(){
+	var username = document.getElementById('login-username').value;
+	var pass = document.getElementById('login-password').value;
+	console.log("in login function");
+	if(username!="" && pass!=""){
+		$.ajax({
+			type: 'POST',
+			async: false,
+			url: 'http://34.66.9.69/signup-login-form/login.php',
+			data: {user: username,
+				pass: pass},
+			success: function(response){
+				console.log(response);
+			},
+			error: function(error){
+				console.log(error);
+			}
+		});
+	}
