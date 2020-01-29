@@ -10,10 +10,13 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }
 
+echo "db connected";
+
 $user = $_POST["user"];
 $pass = $_POST["pass"];
 
 if($user!="" and $pass!=""){
+	echo "in condition";
 	$sql = "SELECT * FROM users WHERE username='$user' AND password='$pass'";
 	$result = $conn->query($sql);
 	if($result->num_rows == 1){
