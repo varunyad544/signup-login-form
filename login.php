@@ -21,7 +21,7 @@ if($user!="" and $pass!=""){
 	$sql = "SELECT * FROM users WHERE username='$user' AND password='$pass'";
 	$result = $conn->query($sql);
 	//echo "query done";
-	$row=mysql_fetch_assoc($result);
+	$row=mysqli_fetch_array($result);
 	echo $row;
 	if($result->num_rows == 1){
 		//$_SESSION["username"] = $row['username'];
