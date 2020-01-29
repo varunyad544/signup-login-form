@@ -3,6 +3,6 @@
 <head>
 </head>
 <body>
-<h1>Welcome</h1>
+<h1>Welcome <?php echo $_SESSION["username"] ?> </h1>
 </body>
 </html>
