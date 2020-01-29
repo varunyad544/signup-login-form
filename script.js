@@ -127,7 +127,7 @@ function submitted(){
 		
 		submitBtn.innerHTML = 'Submitting';
 		
-		/*$.ajax({
+		$.ajax({
 			type: 'POST',
 			async: false,
 			url: 'http://34.66.9.69/signup-login-form/processing.php',
@@ -144,8 +144,7 @@ function submitted(){
 			error: function(error){
 				console.log(error);
 			}
-		});*/
-		signup(usernameElement.value, phoneElement.value, emailElement.value, passwordElement.value);
+		});
 	}else{
 		if(usernameElement.value==""){
 			usernameElement.style.borderColor="#f00";
@@ -165,7 +164,7 @@ function submitted(){
 	}
 }
 
-/*function login(){
+function login(){
 	var username = document.getElementById('login-username').value;
 	var pass = document.getElementById('login-password').value;
 	console.log("in login function");
@@ -184,4 +183,4 @@ function submitted(){
 			}
 		});
 	}
-}*/
+}
