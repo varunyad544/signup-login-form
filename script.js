@@ -177,9 +177,8 @@ function login(){
 				pass: pass},
 			success: function(response){
 				console.log(response);
-				if(response==1){
-					console.log("logged in");
-				}
+					console.log(response);
+				
 			},
 			error: function(error){
 				console.log(error);
