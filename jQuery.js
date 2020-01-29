@@ -28,7 +28,7 @@ function signup(username,phone,email,pass){
 			success: function(response){
 				console.log(response);
 				if(response==1){
-					submitBtn.innerHTML = 'Submitted';
+					$("#signup-submit-btn").html('submitted');
 				}
 			},
 			error: function(error){
@@ -40,7 +40,7 @@ function signup(username,phone,email,pass){
 function login(){
 	var username = document.getElementById('login-username').value;
 	var pass = document.getElementById('login-password').value;
-	console.log("in login function");
+
 	if(username!="" && pass!=""){
 		$.ajax({
 			type: 'POST',
