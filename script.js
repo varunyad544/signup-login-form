@@ -163,3 +163,27 @@ function submitted(){
 		}
 	}
 }
+
+function login(){
+	var username = document.getElementById('login-username');
+	var password = document.getElementById('login-password');
+	
+	if(username!="" && password!=""){
+		$.ajax({
+			type: 'POST',
+			async: false,
+			url: 'http://34.66.9.69/signup-login-form/login.php',
+			data: {user: username,
+				pass: password},
+			success: function(response){
+				console.log(response);
+				if(response==1){
+					console.log("logged in");
+				}
+			},
+			error: function(error){
+				console.log(error);
+			}
+		});
+	}
+}
