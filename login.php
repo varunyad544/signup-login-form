@@ -12,12 +12,15 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }
 
+echo "db connected";
+
 $user = $_POST["user"];
 $pass = $_POST["pass"];
 
 if($user!="" and $pass!=""){
 	$sql = "SELECT * FROM users WHERE username='$user' AND password='$pass'";
 	$result = $conn->query($sql);
+	echo "query done";
 	$row=mysql_fetch_assoc($result);
 	echo $row;
 	if($result->num_rows == 1){
