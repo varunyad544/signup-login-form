@@ -166,15 +166,15 @@ function submitted(){
 
 function login(){
 	var username = document.getElementById('login-username');
-	var password = document.getElementById('login-password');
+	var pass = document.getElementById('login-password');
 	console.log("in login function");
-	if(username!="" && password!=""){
+	if(username!="" && pass!=""){
 		$.ajax({
 			type: 'POST',
 			async: false,
 			url: 'http://34.66.9.69/signup-login-form/login.php',
 			data: {user: username,
-				pass: password},
+				pass: pass},
 			success: function(response){
 				console.log(response);
 				if(response==1){
