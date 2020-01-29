@@ -167,7 +167,7 @@ function submitted(){
 function login(){
 	var username = document.getElementById('login-username').value;
 	var pass = document.getElementById('login-password').value;
-	console.log("in login function");
+	
 	if(username!="" && pass!=""){
 		$.ajax({
 			type: 'POST',
