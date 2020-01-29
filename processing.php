@@ -22,9 +22,9 @@ if ($conn->connect_error) {
 }
 
 if($username!="" and $phone!="" and $email!="" and $pass!=""){
-	emailAvailable = checkEmailAvailability($email);
+	$emailAvailable = checkEmailAvailability($email);
 	
-	if(emailAvailable){
+	if($emailAvailable){
 		$sql = "INSERT INTO users(username, phone, email, password) VALUES ('$username','$phone','$email','$pass')";
 
 		if ($conn->query($sql) === TRUE){
@@ -43,10 +43,13 @@ else{
 
 function checkEmailAvailability($email){
 	global $conn;
+	echo "checking email";
 	$result = $conn->query("SELECT user_id from users where email = '$email'");	
 	if($result->num_rows == 0){
+		echo "available";
 		return true;	
 	}else{
+		echo "available";
 		return false;	
 	}
 }
