@@ -1,6 +1,6 @@
 <?php
 
-//session_start();
+session_start();
 $servername = "34.66.9.69";
 $dbusername = "varun1";
 $dbpassword = "Varun@123";
