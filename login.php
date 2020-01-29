@@ -16,9 +16,9 @@ $pass = $_POST["pass"];
 if($user!="" and $pass!=""){
 	$sql = "SELECT * FROM users WHERE username='$user' AND password='$pass'";
 	$result = $conn->query($sql);
-	$array=mysql_fetch_assoc($result);
+	$arr=mysql_fetch_assoc($result);
 	if($result->num_rows == 1){
-		$_SESSION["username"] = $array['username'];
+		$_SESSION["username"] = $arr['username'];
 		echo 1;
 	}else{
 		echo 0;
