@@ -42,6 +42,7 @@ else{
 }
 
 function checkEmailAvailability($email){
+	global $conn;
 	$result = $conn->query("SELECT user_id from users where email = '$email'");	
 	if($result->num_rows == 0){
 		return true;	
