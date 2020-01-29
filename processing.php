@@ -43,13 +43,10 @@ else{
 
 function checkEmailAvailability($email){
 	global $conn;
-	echo "checking email";
 	$result = $conn->query("SELECT user_id from users where email = '$email'");	
 	if($result->num_rows == 0){
-		echo "available";
 		return true;	
 	}else{
-		echo "available";
 		return false;	
 	}
 }
