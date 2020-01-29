@@ -14,6 +14,16 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	    <script type="text/javascript"> 
+        function preventBack() { 
+            window.history.forward();  
+        } 
+          
+        setTimeout("preventBack()", 0); 
+          
+        window.onunload = function () { null }; 
+    </script>
 </head>
 <body>
 <div class="container">
