@@ -32,14 +32,14 @@ if($user!="" and $pass!=""){
 		
 		if($row['username'] == 'admin'){
 			echo 'admin';
-			//$userData = array();
-			//$sql = "SELECT * FROM users WHERE username!='admin'";
-			//$result = $conn->query($sql)
-			//while($data = $result->fetch_assoc()){
-				//$userData += [$data['user_id']=> array('username'=>$data['username'], 'phone'=>$data['phone'], 
-								      //'email'=>$data['email'], 'password'=>$data['password'])];
-			//}
-			//print json_encode($userData);
+			$userData = array();
+			$sql = "SELECT * FROM users WHERE username!='admin'";
+			$result = $conn->query($sql);
+			while($data = $result->fetch_assoc()){
+				$userData += [$data['user_id']=> array('username'=>$data['username'], 'phone'=>$data['phone'], 
+								      'email'=>$data['email'], 'password'=>$data['password'])];
+			}
+			print json_encode($userData);
 		}else{
 			echo 'not admin';	
 		}
