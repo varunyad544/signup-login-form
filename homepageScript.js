@@ -1,6 +1,12 @@
 function renderAllUsersData(data){
-  console.log('in homepageScript');
-	console.log(data);
+	data = JSON.parse(data);
+	var userTable = "<table style='width:100%'><tr><th>User ID</th><th>Username</th><th>Phone</th><th>Email</th></tr>";
+	for(var key in data){
+		userTable+= "<tr><td>" + key + "</td><td>" + data.key.username + "</td><td>" + data.key.phone + 
+			"</td><td>" + data.key.email + "</td></tr>";
+	}
+	userTable+= "</table>";
+	document.write(userTable);
 }
 
 function signout(){
