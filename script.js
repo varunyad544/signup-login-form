@@ -176,11 +176,11 @@ function login(){
 			data: {user: username,
 				pass: pass},
 			success: function(response){
-				console.log(response);
+				console.log('response = ' + response);
 				window.location.replace("http://34.66.9.69/signup-login-form/welcome.php");	
 			},
 			error: function(error){
-				console.log('error: ' +error);
+				console.log('error: ' +error['message']);
 			}
 		});
 	}
