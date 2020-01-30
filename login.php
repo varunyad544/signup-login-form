@@ -16,9 +16,12 @@ $user = $_POST["user"];
 $pass = $_POST["pass"];
 
 if($user!="" and $pass!=""){
+	echo $user;
 	$sql = "SELECT * FROM users WHERE username='$user' AND password='$pass'";
 	$result = $conn->query($sql);
 	$row=mysqli_fetch_assoc($result);
+	
+	echo 'result';
 	
 	if($result->num_rows == 1){	
 		$_SESSION["username"] = $row["username"];
