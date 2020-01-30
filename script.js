@@ -177,7 +177,9 @@ function login(){
 				pass: pass},
 			success: function(response){
 				console.log(response);
-				window.location.replace("http://34.66.9.69/signup-login-form/welcome.php");
+				if(response == 1){
+					window.location.replace("http://34.66.9.69/signup-login-form/welcome.php");	
+				}
 			},
 			error: function(error){
 				console.log(error);
