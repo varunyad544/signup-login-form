@@ -39,10 +39,10 @@ if($user!="" and $pass!=""){
 			die(json_encode(array('validUser'=>true, 'isAdmin'=>false, 'allUserData'=>"")));
 		}
 	}else{
-		die(json_encode(array('validUser'=>false, 'isAdmin'=>false, 'allUserData'=>"")));
+		//die(json_encode(array('validUser'=>false, 'isAdmin'=>false, 'allUserData'=>"")));
 	}
 }else{
-	die(json_encode(array('validUser'=>false, 'isAdmin'=>false, 'allUserData'=>"")));
+	//die(json_encode(array('validUser'=>false, 'isAdmin'=>false, 'allUserData'=>"")));
 }
 $conn->close();
 ?>
