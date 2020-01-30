@@ -18,11 +18,13 @@ $pass = $_POST["pass"];
 if($user!="" and $pass!=""){
 	$sql = "SELECT * FROM users WHERE username='$user' AND password='$pass'";
 	$result = $conn->query($sql);
-	echo "query done";
+	
 	$row=mysqli_fetch_assoc($result);
-	echo $row['username'];
 	if($result->num_rows == 1){
 		$_SESSION["username"] = $row['username'];
+		if($row['username'] == 'admin'){
+			echo 'admin logged in'	;
+		}
 		echo 1;
 	}else{
 		echo 0;
