@@ -23,3 +23,11 @@ $('#login-password').keypress(function(e){
         return false;
     }
 });
+
+$('#confirm-password').keypress(function(e){
+   var key = e.which;
+    if(key === 13){
+     $('#signup-submit-btn').click();
+        return false;
+    }
+});
