@@ -38,14 +38,10 @@ if($user!="" and $pass!=""){
 		}
 		//echo 1;
 	}else{
-		header('HTTP/1.1 500');
-        	header('Content-Type: application/json; charset=UTF-8');
-        	die(json_encode(array('message' => 'invalid username or password.', 'code' => 1337)));
+		echo 0;
 	}
 }else{
-	header('HTTP/1.1 500');
-	header('Content-Type: application/json; charset=UTF-8');
-	die(json_encode(array('message' => 'username or password empty.', 'code' => 1337)));	
+	echo 0;
 }
 $conn->close();
 ?>
