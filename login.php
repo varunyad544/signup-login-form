@@ -34,14 +34,15 @@ if($user!="" and $pass!=""){
 				$userData += [$data['user_id']=> array('username'=>$data['username'], 'phone'=>$data['phone'], 
 								      'email'=>$data['email'], 'password'=>$data['password'])];
 			}
-			die(json_encode($userData));
+			die(json_encode(array('validUser'=>1, 'isAdmin'=>1, 'allUserData'=>json_encode($data))));
+		}else{
+			die(json_encode(array('validUser'=>1, 'isAdmin'=>0, 'allUserData'=>"")));
 		}
-		//echo 1;
 	}else{
-		//echo 0;
+		die(json_encode(array('validUser'=>0, 'isAdmin'=>0, 'allUserData'=>"")));
 	}
 }else{
-	//echo 0;
+	die(json_encode(array('validUser'=>0, 'isAdmin'=>0, 'allUserData'=>"")));
 }
 $conn->close();
 ?>
