@@ -112,6 +112,7 @@
 
 
 <script src="jQuery.js"></script>
-<script src="script.js"></script>
+<script src="homepageScript.js"></script>
+<script src="formScript.js"></script>
 </body>
 </html>
