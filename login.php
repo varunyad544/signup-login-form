@@ -29,7 +29,7 @@ if($user!="" and $pass!=""){
 			echo 'here';
 			$sql = "SELECT * FROM users where username!='admin'";
 			$data = mysqli_fetch_assoc($conn->query($sql));
-			echo $data;
+			print json_encode($data);
 		}
 		echo 1;
 	}else{
