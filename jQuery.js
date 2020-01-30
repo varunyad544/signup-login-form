@@ -15,3 +15,11 @@ $("#login-btn").on("click", function () {
     $(".login-form").slideUp(500);
     $(".signup-form").slideDown(500);
   });
+
+$('#login-password').keypress(function(e){
+    var key = e.which;
+    if(key === 13){
+     $('#login-submit-btn').click();
+        return false;
+    }
+});
