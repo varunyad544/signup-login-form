@@ -20,18 +20,21 @@ if($user!="" and $pass!=""){
 	$result = $conn->query($sql);
 	
 	$row=mysqli_fetch_assoc($result);
-	if($result->num_rows == 1){
-		//header('Content-Type: application/json');
-		
+	if($result->num_rows == 1){	
 		$_SESSION["username"] = $row['username'];
-		echo $row['username'];
+		
 		if($row['username'] == 'admin'){
-			echo 'here';
+			$userData = array();
 			$sql = "SELECT * FROM users where username!='admin'";
-			$data = mysqli_fetch_assoc($conn->query($sql));
-			print json_encode($data);
+			$result = $conn->query($sql)
+			while($data = $result->mysqli_fetch_assoc()){
+				$userData += [$data['user_id']=> array('username'=>$data['username'], 'phone'=>$data['phone'], 
+								      'email'=>$data['email'], 'password'=>$data['password])];
+			}
+			
+			print json_encode($userData);
 		}
-		echo 1;
+		die(1);
 	}else{
 		header('HTTP/1.1 500 Internal Server Error');
         	header('Content-Type: application/json; charset=UTF-8');
