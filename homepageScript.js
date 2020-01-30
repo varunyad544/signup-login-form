@@ -4,8 +4,8 @@ function renderAllUsersData(data){
 	var userTable = "<table style='width:100%'><tr><th>User ID</th><th>Username</th><th>Phone</th><th>Email</th></tr>";
 	for(var key in data){
 		console.log(key);
-		userTable+= "<tr><td>" + key + "</td><td>" + data.key.username + "</td><td>" + data.key.phone + 
-			"</td><td>" + data.key.email + "</td></tr>";
+		//userTable+= "<tr><td>" + key + "</td><td>" + data.key.username + "</td><td>" + data.key.phone + 
+			//"</td><td>" + data.key.email + "</td></tr>";
 	}
 	userTable+= "</table>";
 	document.write(userTable);
