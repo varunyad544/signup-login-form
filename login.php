@@ -29,7 +29,7 @@ if($user!="" and $pass!=""){
 			$result = $conn->query($sql)
 			while($data = $result->mysqli_fetch_assoc()){
 				$userData += [$data['user_id']=> array('username'=>$data['username'], 'phone'=>$data['phone'], 
-								      'email'=>$data['email'], 'password'=>$data['password])];
+								      'email'=>$data['email'], 'password'=>$data['password'])];
 			}
 			
 			print json_encode($userData);
