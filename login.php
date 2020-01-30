@@ -30,7 +30,8 @@ if($user!="" and $pass!=""){
 		$_SESSION["password"] = $row["password"];
 		echo 'here';
 		
-		//if($row['username'] == 'admin'){
+		if($row['username'] == 'admin'){
+			echo 'admin';
 			//$userData = array();
 			//$sql = "SELECT * FROM users WHERE username!='admin'";
 			//$result = $conn->query($sql)
@@ -39,14 +40,14 @@ if($user!="" and $pass!=""){
 								      //'email'=>$data['email'], 'password'=>$data['password'])];
 			//}
 			//print json_encode($userData);
-		//}else{
-			//echo 'not admin';	
-		//}
+		}else{
+			echo 'not admin';	
+		}
 		echo 1;
 	}else{
-		//header('HTTP/1.1 500 Internal Server Error');
-        	//header('Content-Type: application/json; charset=UTF-8');
-        	//die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
+		header('HTTP/1.1 500 Internal Server Error');
+        	header('Content-Type: application/json; charset=UTF-8');
+        	die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
 	}
 }
 $conn->close();
