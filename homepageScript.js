@@ -1,5 +1,6 @@
 function renderAllUsersData(data){
   console.log('in homepageScript');
+	console.log(data);
 }
 
 function signout(){
