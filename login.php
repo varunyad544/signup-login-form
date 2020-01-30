@@ -27,7 +27,7 @@ if($user!="" and $pass!=""){
 		if($row['username'] == 'admin'){
 			$sql = "SELECT * FROM users where username!='admin'";
 			$data = mysqli_fetch_assoc($conn->query($sql));
-			print $data;
+			echo $data;
 		}
 		echo 1;
 	}else{
