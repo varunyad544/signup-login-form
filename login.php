@@ -18,7 +18,7 @@ $pass = $_POST["pass"];
 if($user!="" and $pass!=""){
 	$sql = "SELECT * FROM users WHERE username='$user' AND password='$pass'";
 	$result = $conn->query($sql);
-	$row=mysqli_fetch_assoc($result);
+	$row=fetch_assoc($result);
 	
 	if($result->num_rows == 1){	
 		$_SESSION["username"] = $row["username"];
@@ -37,7 +37,7 @@ if($user!="" and $pass!=""){
 			
 			print json_encode($userData);
 		}
-		die(1);
+		echo 1;
 	}else{
 		header('HTTP/1.1 500 Internal Server Error');
         	header('Content-Type: application/json; charset=UTF-8');
