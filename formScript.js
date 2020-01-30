@@ -182,6 +182,8 @@ function login(){
 					window.location.replace("http://34.66.9.69/signup-login-form/homepage.php");		
 				}else if(response.validUser == true && response.isAdmin == false){
 					window.location.replace("http://34.66.9.69/signup-login-form/homepage.php");		
+				}else{
+					console.log('invalid user');	
 				}
 			},
 			error: function(error){
