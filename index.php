@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Basic form</title>
-	<link rel="shortcut icon" href="">
+	<link rel="shortcut icon" href="#" />
 	<script src="https://kit.fontawesome.com/c9ecbb8122.js" crossorigin="anonymous"></script>
 	
 	<!-- Latest compiled and minified CSS -->
