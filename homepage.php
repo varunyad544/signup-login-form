@@ -4,7 +4,7 @@ include 'login.php';
 <!Doctype HTML>
 <html>
 <head>
-  <link rel="shortcut icon" href="">
+  <link rel="shortcut icon" href="#" />
 </head>
 <body>
 <h1>Welcome <?php echo $_SESSION["username"] ?> </h1>
