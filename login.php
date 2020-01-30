@@ -16,19 +16,15 @@ $user = $_POST["user"];
 $pass = $_POST["pass"];
 
 if($user!="" and $pass!=""){
-	echo $user;
 	$sql = "SELECT * FROM users WHERE username='$user' AND password='$pass'";
 	$result = $conn->query($sql);
 	$row=mysqli_fetch_assoc($result);
-	
-	echo 'result';
 	
 	if($result->num_rows == 1){	
 		$_SESSION["username"] = $row["username"];
 		$_SESSION["phone"] = $row["phone"];
 		$_SESSION["email"] = $row["email"];
 		$_SESSION["password"] = $row["password"];
-		echo 'here';
 		
 		if($row['username'] == 'admin'){
 			echo 'admin';
@@ -39,16 +35,18 @@ if($user!="" and $pass!=""){
 				$userData += [$data['user_id']=> array('username'=>$data['username'], 'phone'=>$data['phone'], 
 								      'email'=>$data['email'], 'password'=>$data['password'])];
 			}
-			print json_encode($userData);
-		}else{
-			echo 'not admin';	
+			die(json_encode($userData));
 		}
-		echo 1;
+		//echo 1;
 	}else{
-		header('HTTP/1.1 500 Internal Server Error');
+		header('HTTP/1.1 500 invalid username or password');
         	header('Content-Type: application/json; charset=UTF-8');
         	die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
 	}
+}else{
+	header('HTTP/1.1 500 username or password empty.');
+	header('Content-Type: application/json; charset=UTF-8');
+	die(json_encode(array('message' => 'ERROR', 'code' => 1337)));	
 }
 $conn->close();
 ?>
