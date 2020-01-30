@@ -27,25 +27,26 @@ if($user!="" and $pass!=""){
 		$_SESSION["username"] = $row["username"];
 		$_SESSION["phone"] = $row["phone"];
 		$_SESSION["email"] = $row["email"];
-		$_SESSION["password"] = $row['password'];
+		$_SESSION["password"] = $row["password"];
+		echo 'here';
 		
-		if($row['username'] == 'admin'){
-			$userData = array();
-			$sql = "SELECT * FROM users WHERE username!='admin'";
-			$result = $conn->query($sql)
-			while($data = $result->fetch_assoc()){
-				$userData += [$data['user_id']=> array('username'=>$data['username'], 'phone'=>$data['phone'], 
-								      'email'=>$data['email'], 'password'=>$data['password'])];
-			}
-			print json_encode($userData);
-		}else{
-			echo 'not admin';	
-		}
+		//if($row['username'] == 'admin'){
+			//$userData = array();
+			//$sql = "SELECT * FROM users WHERE username!='admin'";
+			//$result = $conn->query($sql)
+			//while($data = $result->fetch_assoc()){
+				//$userData += [$data['user_id']=> array('username'=>$data['username'], 'phone'=>$data['phone'], 
+								      //'email'=>$data['email'], 'password'=>$data['password'])];
+			//}
+			//print json_encode($userData);
+		//}else{
+			//echo 'not admin';	
+		//}
 		echo 1;
 	}else{
-		header('HTTP/1.1 500 Internal Server Error');
-        	header('Content-Type: application/json; charset=UTF-8');
-        	die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
+		//header('HTTP/1.1 500 Internal Server Error');
+        	//header('Content-Type: application/json; charset=UTF-8');
+        	//die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
 	}
 }
 $conn->close();
