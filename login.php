@@ -18,7 +18,7 @@ $pass = $_POST["pass"];
 if($user!="" and $pass!=""){
 	$sql = "SELECT * FROM users WHERE username='$user' AND password='$pass'";
 	$result = $conn->query($sql);
-	$row=fetch_assoc($result);
+	$row=mysqli_fetch_assoc($result);
 	
 	if($result->num_rows == 1){	
 		$_SESSION["username"] = $row["username"];
@@ -34,8 +34,9 @@ if($user!="" and $pass!=""){
 				$userData += [$data['user_id']=> array('username'=>$data['username'], 'phone'=>$data['phone'], 
 								      'email'=>$data['email'], 'password'=>$data['password'])];
 			}
-			
 			print json_encode($userData);
+		}else{
+			echo 'not admin';	
 		}
 		echo 1;
 	}else{
