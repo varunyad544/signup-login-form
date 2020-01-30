@@ -1,3 +1,3 @@
-function renderAllUsersData(var data){
+function renderAllUsersData(data){
   console.log('in homepageScript');
 }
