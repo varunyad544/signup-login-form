@@ -24,11 +24,13 @@ if($user!="" and $pass!=""){
 		//header('Content-Type: application/json');
 		
 		$_SESSION["username"] = $row['username'];
-		//if($row['username'] == 'admin'){
-			//$sql = "SELECT * FROM users where username!='admin'";
-			//$data = mysqli_fetch_assoc($conn->query($sql));
-			//echo $data;
-		//}
+		echo $row['username'];
+		if($row['username'] == 'admin'){
+			echo 'here';
+			$sql = "SELECT * FROM users where username!='admin'";
+			$data = mysqli_fetch_assoc($conn->query($sql));
+			echo $data;
+		}
 		echo 1;
 	}else{
 		header('HTTP/1.1 500 Internal Server Error');
