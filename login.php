@@ -23,7 +23,7 @@ if($user!="" and $pass!=""){
 	if($result->num_rows == 1){
 		$_SESSION["username"] = $row['username'];
 		if($row['username'] == 'admin'){
-			echo 'admin logged in'	;
+
 		}
 		echo 1;
 	}else{
