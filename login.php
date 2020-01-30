@@ -38,10 +38,10 @@ if($user!="" and $pass!=""){
 		}
 		//echo 1;
 	}else{
-		echo 0;
+		//echo 0;
 	}
 }else{
-	echo 0;
+	//echo 0;
 }
 $conn->close();
 ?>
