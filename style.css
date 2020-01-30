@@ -6,7 +6,8 @@ html{
 }
 
 body{
-  background-image: url('https://www.imgbase.info/images/safe-wallpapers/photography/cityscape/50451_cityscape_skyscraper_skyscrapers_in_th_fog.jpg');
+  //background-image: url('https://www.imgbase.info/images/safe-wallpapers/photography/cityscape/50451_cityscape_skyscraper_skyscrapers_in_th_fog.jpg');
+	background-image: url('background-image.jpg');
   background-position: center;
   background-repeat: no-repeat; 
   background-size: cover;
