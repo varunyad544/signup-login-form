@@ -27,7 +27,7 @@ if($user!="" and $pass!=""){
 		$_SESSION["email"] = $row["email"];
 		$_SESSION["password"] = $row["password"];
 		
-		die(1);
+		echo 1;
 	}else{
 		//die(json_encode(array('validUser'=>false, 'isAdmin'=>false, 'allUserData'=>"")));
 	}
