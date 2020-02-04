@@ -1,6 +1,6 @@
 function renderAllUsersData(data){
 	
-	var node = document.createElement("P");                
+	var node = document.createElement("p");                
 	var textnode = document.createTextNode("Water");         
 	node.appendChild(textnode);                              
 	document.getElementById("data").appendChild(node);
