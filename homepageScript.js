@@ -1,6 +1,11 @@
 function renderAllUsersData(data){
-	console.log('here');
-	console.log(data);
+	var userTable = "<table style='width:100%'><tr><th>User ID</th><th>Username</th><th>Phone</th><th>Email</th></tr>";
+	for(key in data){
+		userTable+= "<tr><td>" + key + "</td><td>" + data[key]['username'] + "</td><td>" + data[key]['phone'] + 
+			"</td><td>" + data[key]['email'] + "</td></tr>";
+	}
+	userTable+= "</table>";
+	$('#data').append(userTable);
 }
 
 function signout(){
