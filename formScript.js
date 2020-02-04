@@ -176,11 +176,8 @@ function login(){
 			data: {user: username,
 				pass: pass},
 			success: function(response){
-				console.log(response);
 				response = JSON.parse(response);
 				var data = JSON.parse(response.allUserData);
-				console.log(typeof data);
-				console.log(data);
 				if(response.validUser == true && response.isAdmin == true){
 					renderAllUsersData(response.allUserData);
 					window.location.replace("http://34.66.9.69/signup-login-form/homepage.php");		
