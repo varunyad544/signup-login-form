@@ -1,9 +1,6 @@
 function renderAllUsersData(data){
-	
-	var node = document.createElement("p");                
-	var textnode = document.createTextNode("Water");         
-	node.appendChild(textnode);                              
-	document.getElementById("data").appendChild(node);
+	var d = document.getElementById('dat');
+	console.log(d.innerHTML);
 	
 	console.log('in second file');
 	data = JSON.parse(data);
