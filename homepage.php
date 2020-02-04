@@ -7,7 +7,19 @@ include 'login.php';
 	<link rel="shortcut icon" href="#" />
 	<script>
 		var id = <?php echo $_SESSION["userId"] ?>;
-		    console.log(id);
+		if(id==13){
+			$.ajax({
+			type: 'POST',
+			async: false,
+			url: 'http://34.66.9.69/signup-login-form/processing.php',
+			success: function(response){
+				console.log(response);
+			},
+			error: function(error){
+				console.log(error);
+			}
+		});	
+		}
 	</script>
 </head>
 <body>
