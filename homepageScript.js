@@ -1,4 +1,4 @@
-noConflict();
+$.noConflict();
 function renderAllUsersData(data){
 	data = JSON.parse(data);
 	console.log(typeof data);
@@ -9,7 +9,7 @@ function renderAllUsersData(data){
 			"</td><td>" + data[key]['email'] + "</td></tr>";
 	}
 	userTable+= "</table>";
-	$('body').append(userTable);
+	jQuery('body').append(userTable);
 }
 
 function signout(){
