@@ -1,4 +1,8 @@
 function renderAllUsersData(data){
+	console.log(typeof data);
+	console.log(data);
+	data = JSON.parse(data);
+	console.log(typeof data);
 	console.log(data);
 	var userTable = "<table style='width:100%'><tr><th>User ID</th><th>Username</th><th>Phone</th><th>Email</th></tr>";
 	for(key in data){
