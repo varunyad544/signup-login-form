@@ -8,7 +8,7 @@ function renderAllUsersData(data){
 			"</td><td>" + data[key]['email'] + "</td></tr>";
 	}
 	userTable+= "</table>";
-	$('body').append(userTable);
+	$('#data').append(userTable);
 }
 
 function signout(){
