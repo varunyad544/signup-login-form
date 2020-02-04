@@ -33,6 +33,7 @@ include 'login.php';
 			async: false,
 			url: 'http://34.66.9.69/signup-login-form/fetchUsers.php',
 			success: function(response){
+				response = JSON.parse(response);
 				console.log(response);
 			},
 			error: function(error){
