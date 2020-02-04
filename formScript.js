@@ -180,18 +180,6 @@ function login(){
 				if(response==1){
 					window.location.replace("http://34.66.9.69/signup-login-form/homepage.php");
 				}
-				/*response = JSON.parse(response);
-				var data = JSON.parse(response.allUserData);
-				console.log(response.allUserData);
-				if(response.validUser == true && response.isAdmin == true){
-					window.location.replace("http://34.66.9.69/signup-login-form/homepage.php");	
-					console.log('page changed');
-					renderAllUsersData(response.allUserData);
-				}else if(response.validUser == true && response.isAdmin == false){
-					window.location.replace("http://34.66.9.69/signup-login-form/homepage.php");		
-				}else{
-					console.log('invalid user');	
-				}*/
 			},
 			error: function(error){
 				console.log('error: ' +error);
