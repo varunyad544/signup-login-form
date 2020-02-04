@@ -176,7 +176,6 @@ function login(){
 			data: {user: username,
 				pass: pass},
 			success: function(response){
-				console.log(response.allUserData);
 				response = JSON.parse(response);
 				console.log(response.allUserData);
 				if(response.validUser == true && response.isAdmin == true){
