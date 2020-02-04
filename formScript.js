@@ -179,6 +179,8 @@ function login(){
 				console.log(response);
 				if(response==1){
 					window.location.replace("http://34.66.9.69/signup-login-form/homepage.php");
+				}else{
+					alert('invalid');	
 				}
 			},
 			error: function(error){
