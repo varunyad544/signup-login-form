@@ -1,5 +1,5 @@
 function renderAllUsersData(data){
-	console.log('in second file');
+	/*console.log('in second file');
 	data = JSON.parse(data);
 	console.log(data);
 	var userTable = "<table style='width:100%'><tr><th>User ID</th><th>Username</th><th>Phone</th><th>Email</th></tr>";
@@ -8,7 +8,7 @@ function renderAllUsersData(data){
 			"</td><td>" + data[key]['email'] + "</td></tr>";
 	}
 	userTable+= "</table>";
-	$('#data').append(userTable);
+	$('#data').append(userTable);*/
 }
 
 function signout(){
