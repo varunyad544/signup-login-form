@@ -179,9 +179,11 @@ function login(){
 				response = JSON.parse(response);
 				var data = JSON.parse(response.allUserData);
 				if(response.validUser == true && response.isAdmin == true){
-					window.location.replace("http://34.66.9.69/signup-login-form/homepage.php");		
-					console.log('page changed');
-					renderAllUsersData(response.allUserData);
+					window.location.replace("http://34.66.9.69/signup-login-form/homepage.php");	
+					setInterval(function(){
+						console.log('page changed');
+						renderAllUsersData(response.allUserData);
+					}, 3000);
 				}else if(response.validUser == true && response.isAdmin == false){
 					window.location.replace("http://34.66.9.69/signup-login-form/homepage.php");		
 				}else{
