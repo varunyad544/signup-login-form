@@ -27,14 +27,12 @@ if($user!="" and $pass!=""){
 		$_SESSION["email"] = $row["email"];
 		$_SESSION["password"] = $row["password"];
 		
-		echo 1;
+		die(1);
 	}else{
 		//die(json_encode(array('validUser'=>false, 'isAdmin'=>false, 'allUserData'=>"")));
-		echo 0;
 	}
 }else{
 	//die(json_encode(array('validUser'=>false, 'isAdmin'=>false, 'allUserData'=>"")));
-	echo 0;
 }
 $conn->close();
 ?>
