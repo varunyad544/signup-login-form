@@ -1,7 +1,4 @@
 function renderAllUsersData(data){
-	var d = document.getElementById('dat');
-	console.log(d.innerHTML);
-	
 	console.log('in second file');
 	data = JSON.parse(data);
 	var userTable = "<table style='width:100%'><tr><th>User ID</th><th>Username</th><th>Phone</th><th>Email</th></tr>";
