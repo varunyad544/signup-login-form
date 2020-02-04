@@ -7,5 +7,5 @@
 		$userData += [$data['user_id']=> array('username'=>$data['username'], 'phone'=>$data['phone'], 
 		      					'email'=>$data['email'], 'password'=>$data['password'])];
 	}
-	die($userData);
+	die(json_encode($userData));
 ?>
