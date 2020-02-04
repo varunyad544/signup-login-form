@@ -31,7 +31,7 @@ include 'login.php';
 			$.ajax({
 			type: 'POST',
 			async: false,
-			url: 'http://34.66.9.69/signup-login-form/processing.php',
+			url: 'http://34.66.9.69/signup-login-form/fetchUsers.php',
 			success: function(response){
 				console.log(response);
 			},
