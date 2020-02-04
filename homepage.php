@@ -34,7 +34,7 @@ include 'login.php';
 			url: 'http://34.66.9.69/signup-login-form/fetchUsers.php',
 			success: function(response){
 				response = JSON.parse(response);
-				console.log(response);
+				renderAllUsersData(response);
 			},
 			error: function(error){
 				console.log(error);
