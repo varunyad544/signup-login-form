@@ -179,8 +179,9 @@ function login(){
 				response = JSON.parse(response);
 				var data = JSON.parse(response.allUserData);
 				if(response.validUser == true && response.isAdmin == true){
-					renderAllUsersData(response.allUserData);
 					window.location.replace("http://34.66.9.69/signup-login-form/homepage.php");		
+					console.log('page changed');
+					renderAllUsersData(response.allUserData);
 				}else if(response.validUser == true && response.isAdmin == false){
 					window.location.replace("http://34.66.9.69/signup-login-form/homepage.php");		
 				}else{
