@@ -21,12 +21,14 @@ if($user!="" and $pass!=""){
 	$row=mysqli_fetch_assoc($result);
 	
 	if($result->num_rows == 1){	
+		$_SESSION["userId"] = $row["user_id"];
 		$_SESSION["username"] = $row["username"];
 		$_SESSION["phone"] = $row["phone"];
 		$_SESSION["email"] = $row["email"];
 		$_SESSION["password"] = $row["password"];
 		
-		if($row['username'] == 'admin'){
+		die(1);
+		/*if($row['username'] == 'admin'){
 			$userData = array();
 			$sql = "SELECT * FROM users WHERE username!='admin'";
 			$result = $conn->query($sql);
@@ -37,7 +39,7 @@ if($user!="" and $pass!=""){
 			die(json_encode(array('validUser'=>true, 'isAdmin'=>true, 'allUserData'=>json_encode($userData))));
 		}else{
 			die(json_encode(array('validUser'=>true, 'isAdmin'=>false, 'allUserData'=>"")));
-		}
+		}*/
 	}else{
 		//die(json_encode(array('validUser'=>false, 'isAdmin'=>false, 'allUserData'=>"")));
 	}
