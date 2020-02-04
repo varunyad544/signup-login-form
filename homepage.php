@@ -6,7 +6,7 @@ include 'login.php';
 <head>
 	<link rel="shortcut icon" href="#" />
 	<script>
-		var id = <?php echo $_SESSION["userId"] ?>
+		var id = <?php echo $_SESSION["userId"] ?>;
 		    console.log(id);
 	</script>
 </head>
