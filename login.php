@@ -27,7 +27,7 @@ if($user!="" and $pass!=""){
 		$_SESSION["email"] = $row["email"];
 		$_SESSION["password"] = $row["password"];
 		
-		die(1);
+		echo 1;
 		/*if($row['username'] == 'admin'){
 			$userData = array();
 			$sql = "SELECT * FROM users WHERE username!='admin'";
