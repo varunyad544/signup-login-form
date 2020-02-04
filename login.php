@@ -28,23 +28,13 @@ if($user!="" and $pass!=""){
 		$_SESSION["password"] = $row["password"];
 		
 		echo 1;
-		/*if($row['username'] == 'admin'){
-			$userData = array();
-			$sql = "SELECT * FROM users WHERE username!='admin'";
-			$result = $conn->query($sql);
-			while($data = $result->fetch_assoc()){
-				$userData += [$data['user_id']=> array('username'=>$data['username'], 'phone'=>$data['phone'], 
-								      'email'=>$data['email'], 'password'=>$data['password'])];
-			}
-			die(json_encode(array('validUser'=>true, 'isAdmin'=>true, 'allUserData'=>json_encode($userData))));
-		}else{
-			die(json_encode(array('validUser'=>true, 'isAdmin'=>false, 'allUserData'=>"")));
-		}*/
 	}else{
 		//die(json_encode(array('validUser'=>false, 'isAdmin'=>false, 'allUserData'=>"")));
+		echo 0;
 	}
 }else{
 	//die(json_encode(array('validUser'=>false, 'isAdmin'=>false, 'allUserData'=>"")));
+	echo 0;
 }
 $conn->close();
 ?>
