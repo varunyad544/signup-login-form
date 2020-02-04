@@ -1,4 +1,10 @@
 function renderAllUsersData(data){
+	
+	var node = document.createElement("P");                
+	var textnode = document.createTextNode("Water");         
+	node.appendChild(textnode);                              
+	document.getElementById("data").appendChild(node);
+	
 	console.log('in second file');
 	data = JSON.parse(data);
 	var userTable = "<table style='width:100%'><tr><th>User ID</th><th>Username</th><th>Phone</th><th>Email</th></tr>";
