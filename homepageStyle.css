@@ -17,6 +17,10 @@ th{
 }
 
 table input{
+	padding: 5px;	
+}
+
+table input{
 	outline: none;
 	border: none;
 	background: none;
