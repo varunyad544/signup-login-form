@@ -40,6 +40,7 @@ function deleteUser(){
 		},
 		success: function(response){
 			if(response==1){
+				$("#"+deleteUserRowId).remove();
 				$('.modal-body').empty();
 				$('.modal-body').text('User deleted sucessfully');
 			}
