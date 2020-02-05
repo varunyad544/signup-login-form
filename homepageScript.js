@@ -22,6 +22,10 @@ function signout(){
 	window.location.replace("http://34.66.9.69/signup-login-form/index.php");
 }
 
+function editUser(e){
+	console.log($(e).val());	
+}
+
 function setModal(e){
 	deleteUserRowId = $(e).parent().parent().attr('id');
 	var x = $("#"+deleteUserRowId).children();
