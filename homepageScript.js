@@ -23,7 +23,10 @@ function signout(){
 
 function setModal(e){
 	deleteUserRowId = $(e).parent().parent().attr('id');
-	$("#"+deleteUserRowId).remove();
+	var x = $("#"+deleteUserRowId).children();
+	console.log(x);
+	console.log(x[0]);
+	console.log(x[0].text());
 }
 
 function deleteUser(){
