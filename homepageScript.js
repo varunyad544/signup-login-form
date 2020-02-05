@@ -33,7 +33,7 @@ function editUser(button){
 function setModal(e){
 	deleteUserRowId = $(e).parent().parent().attr('id');
 	var i = $(e).parent().parent().index();
-	var y = $('table').eq(i).cells;
+	var y = $('table').eq(i);
 	console.log(y);
 	var x = $("#"+deleteUserRowId).find("input");
 	deleteUsername = x[0]['value'];
