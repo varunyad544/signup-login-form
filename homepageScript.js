@@ -28,9 +28,9 @@ function editUser(button){
 	if($(button).val()=='Edit'){
 		$(button).val('Save');
 		$(button).html('Save');
-		console.log($("#"+rowId).children().children());
-		$("#"+rowId).children()[1].children().attr('readonly',false);
-		$("#"+rowId).children()[1].children().css({ "border": "1px solid #ced4da", "background-color":"rgb(24, 26, 27)"  });
+		console.log($("#"+rowId).children().children()[0].readOnly);
+		$("#"+rowId).children().children().readOnly = false; 
+		$("#"+rowId).children().children().css({ "border": "1px solid #ced4da", "background-color":"rgb(24, 26, 27)"  });
 	}
 }
 
