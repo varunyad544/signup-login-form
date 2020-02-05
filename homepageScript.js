@@ -32,6 +32,7 @@ function editUser(button){
 function setModal(e){
 	deleteUserRowId = $(e).parent().parent().attr('id');
 	var x = $("#"+deleteUserRowId).children();
+	console.log(deleteUserRowId, x, x[0]);
 	deleteUsername = x[1].textContent;
 	deleteUserId = x[0].textContent;
 	$('.modal-title').text('Delete '+ deleteUsername);
