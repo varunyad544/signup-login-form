@@ -24,9 +24,8 @@ function signout(){
 function setModal(e){
 	deleteUserRowId = $(e).parent().parent().attr('id');
 	var x = $("#"+deleteUserRowId).children();
-	console.log(x);
-	console.log(x[0]);
-	console.log(x[0].textContent);
+	deleteUsername = x[1].textContent;
+	$('.modal-title').text('Delete '+ deleteUsername);
 }
 
 function deleteUser(){
