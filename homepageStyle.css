@@ -14,3 +14,9 @@ th{
 .edit-btn{
 	margin-right: 10px;	
 }
+
+table input{
+	outline: none;
+	border: none;
+	background: none;
+}
