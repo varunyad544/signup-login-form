@@ -33,6 +33,15 @@ function editUser(e){
 			$("#"+editUserRowId).children().children()[i].readOnly = false; 
 			$("#"+editUserRowId).children().children()[i].style.border = "1px solid #ced4da";	
 		}
+	}else if($(e).val()=='Save'){
+		$(e).val('Edit');
+		$(e).html('Save');
+		for(var j=0;j<3;j++){
+			$("#"+editUserRowId).children().children()[j].readOnly = true; 
+			$("#"+editUserRowId).children().children()[j].style.border = "none";	
+		}
+	}else{
+		console.log('error');	
 	}
 }
 
