@@ -22,21 +22,21 @@ function signout(){
 	window.location.replace("http://34.66.9.69/signup-login-form/index.php");
 }
 
-function editUser(button){
-	editUserRowId = $(button).parent().parent().attr('id');
-	console.log($(button).val());
-	if($(button).val()=='Edit'){
+function editUser(e){
+	editUserRowId = $(e).parent().parent().attr('id');
+	console.log($(e).val());
+	if($(e).val()=='Edit'){
 		console.log('here');
-		$(button).val('Save');
-		$(button).html('Save');
+		$(e).val('Save');
+		$(e).html('Save');
 		for(var i=0;i<3;i++){
 			$("#"+editUserRowId).children().children()[i].readOnly = false; 
 			$("#"+editUserRowId).children().children()[i].style.border = "1px solid #ced4da";	
 		}
 	}
-	if($(button).val()=='Save'){
-		$(button).val('Edit');
-		$(button).html('Edit');
+	if($(e).val()=='Save'){
+		$(e).val('Edit');
+		$(e).html('Edit');
 		for(var i=0;i<3;i++){
 			$("#"+editUserRowId).children().children()[i].readOnly = true; 
 			$("#"+editUserRowId).children().children()[i].style.border = "none";	
