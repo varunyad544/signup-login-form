@@ -26,7 +26,7 @@ function setModal(e){
 	var x = $("#"+deleteUserRowId).children();
 	console.log(x);
 	console.log(x[0]);
-	console.log(x[0].value);
+	console.log(x[0].text);
 }
 
 function deleteUser(){
