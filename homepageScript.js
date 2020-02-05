@@ -23,11 +23,13 @@ function signout(){
 
 function editUser(button){
 	var rowId = $(button).parent().parent().attr('id');
+	console.log(rowId);
 	
 	if($(button).val()=='Edit'){
 		$(button).val('Save');
-		$("#"+deleteUserRowId).children().children()[0].attr('readonly',false);
-		$("#"+deleteUserRowId).children().children()[0].css({ "border": "1px solid #ced4da", "background-color":"rgb(24, 26, 27)"  });
+		$(button).html('Save');
+		$("#"+rowId).children().children()[0].attr('readonly',false);
+		$("#"+rowId).children().children()[0].css({ "border": "1px solid #ced4da", "background-color":"rgb(24, 26, 27)"  });
 	}
 }
 
