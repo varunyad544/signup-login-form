@@ -1,3 +1,4 @@
+	var editUserRowId='';
 	var deleteUserRowId='';
 	var deleteUsername='';
 	var deleteUserId='';
@@ -22,16 +23,23 @@ function signout(){
 }
 
 function editUser(button){
-	var rowId = $(button).parent().parent().attr('id');
-	console.log(rowId);
+	editUserRowId = $(button).parent().parent().attr('id');
 	
 	if($(button).val()=='Edit'){
 		$(button).val('Save');
 		$(button).html('Save');
-		console.log($("#"+rowId).children().children());
-		console.log($("#"+rowId).children().children()[0]);
-		$("#"+rowId).children().children()[0].readOnly = false; 
-		$("#"+rowId).children().children()[0].style.border = "1px solid #ced4da";
+		for(var i=0;i<3;i++){
+			$("#"+editUserRowId).children().children()[i].readOnly = false; 
+			$("#"+editUserRowId).children().children()[i].style.border = "1px solid #ced4da";	
+		}
+	}
+	if($(button).val()=='Save'){
+		$(button).val('Edit');
+		$(button).html('Edit');
+		for(var i=0;i<3;i++){
+			$("#"+editUserRowId).children().children()[i].readOnly = true; 
+			$("#"+editUserRowId).children().children()[i].style.border = "none";	
+		}
 	}
 }
 
