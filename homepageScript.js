@@ -1,4 +1,3 @@
-$(document).ready(function(){
 	var deleteUserRowId='';
 	var deleteUsername='';
 	
@@ -29,5 +28,3 @@ function setModal(e){
 
 function deleteUser(){
 }
-	
-});
