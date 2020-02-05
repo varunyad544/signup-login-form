@@ -31,7 +31,7 @@ function editUser(button){
 		console.log($("#"+rowId).children().children());
 		console.log($("#"+rowId).children().children()[0]);
 		$("#"+rowId).children().children()[0].readOnly = false; 
-		$("#"+rowId).children().children()[0].css({ "border": "1px solid #ced4da", "background-color":"#ddd"  });
+		$("#"+rowId).children().children()[0].style({ "border": "1px solid #ced4da", "background-color":"#ddd"  });
 	}
 }
 
