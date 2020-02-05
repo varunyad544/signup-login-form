@@ -12,7 +12,8 @@ th{
 }
 
 .edit-btn{
-	margin-right: 10px;	
+	margin-right: 10px;
+	width: 60px;
 }
 
 table input{
