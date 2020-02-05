@@ -5,7 +5,7 @@
 	function renderAllUsersData(data){
 	var userTable = "<table><tr><th>User ID</th><th>Username</th><th>Phone</th><th>Email</th><th></th></tr>";
 	for(key in data){
-		userTable+= "<tr id='row"+key+"'><td>" + key + "</td><td><input type='text' value='" + data[key]['username'] + "'></td><td><input type='text' value='" + data[key]['phone'] + "'></td><td><input type='text' value='" + data[key]['email'] + "'></td><td>";
+		userTable+= "<tr id='row"+key+"'><td>" + key + "</td><td><input type='text' value='" + data[key]['username'] + " disabled'></td><td><input type='text' value='" + data[key]['phone'] + " disabled'></td><td><input type='text' value='" + data[key]['email'] + " disabled'></td><td>";
 		
 		userTable+= "<button type='button' class='btn btn-primary edit-btn' onclick='editUser(this);' value='Edit'>Edit</button>";
 		
