@@ -24,7 +24,7 @@ function signout(){
 
 function editUser(button){
 	editUserRowId = $(button).parent().parent().attr('id');
-	
+	console.log($(button).val());
 	if($(button).val()=='Edit'){
 		$(button).val('Save');
 		$(button).html('Save');
