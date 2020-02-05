@@ -26,15 +26,14 @@ function editUser(button){
 	
 	if($(button).val()=='Edit'){
 		$(button).val('Save');
-		
+		$("#"+deleteUserRowId).children().children()[0].attr('readonly',false);
+		$("#"+deleteUserRowId).children().children()[0].css({ "border": "1px solid #ced4da", "background-color":"rgb(24, 26, 27)"  });
 	}
 }
 
 function setModal(e){
 	deleteUserRowId = $(e).parent().parent().attr('id');
 	deleteUserId = $("#"+deleteUserRowId).children()[0].innerText;
-	
-	console.log($("#"+deleteUserRowId).children().children());
 	
 	var x = $("#"+deleteUserRowId).find("input");
 	deleteUsername = x[0]['value'];
