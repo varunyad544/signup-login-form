@@ -1,10 +1,7 @@
 <?php
 include 'login.php';
 if(!isset($_SESSION['username'])){
-	echo "
-		<script type=\"text/javascript\">
-			window.location.replace(\"http://34.66.9.69/signup-login-form/index.php\");
-		</script>";
+	header("Location: http://34.66.9.69/signup-login-form/fetchUsers.php");
 }
 ?>
 <!Doctype HTML>
