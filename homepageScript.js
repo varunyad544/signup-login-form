@@ -22,8 +22,12 @@ function signout(){
 	window.location.replace("http://34.66.9.69/signup-login-form/index.php");
 }
 
-function editUser(e){
-	console.log($(e).val());	
+function editUser(button){
+	var rowId = $(button).parent().parent().attr('id');
+	console.log(rowId);
+	if($(button).val()=='Edit'){
+		$(button).val('Save');
+	}
 }
 
 function setModal(e){
