@@ -1,5 +1,11 @@
 <?php
 include 'login.php';
+if(!isset($_SESSION['username'])){
+	echo "
+		<script type=\"text/javascript\">
+			window.location.replace(\"http://34.66.9.69/signup-login-form/index.php\");
+		</script>";
+}
 ?>
 <!Doctype HTML>
 <html>
@@ -67,6 +73,14 @@ include 'login.php';
 				console.log(error);
 			}
 		});	
+		}
+		
+		function signout(){
+			<?php
+				session_unset();
+				session_destroy();
+			?>
+			window.location.replace("http://34.66.9.69/signup-login-form/index.php");
 		}
 	</script>
 </body>
