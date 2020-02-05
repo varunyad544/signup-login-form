@@ -1,7 +1,7 @@
 <?php
-include 'login.php';
+session_start();
 if(!isset($_SESSION['username'])){
-	header("Location: http://34.66.9.69/signup-login-form/fetchUsers.php");
+	header("Location: http://34.66.9.69/signup-login-form/index.php");
 }
 ?>
 <!Doctype HTML>
