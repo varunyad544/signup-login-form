@@ -28,7 +28,7 @@ function editUser(button){
 	if($(button).val()=='Edit'){
 		$(button).val('Save');
 		$(button).html('Save');
-		$("#"+rowId).children().children()[0].attr('readonly',false);
+		$("#"+rowId).children().children()[0].prop('readonly',false);
 		$("#"+rowId).children().children()[0].css({ "border": "1px solid #ced4da", "background-color":"rgb(24, 26, 27)"  });
 	}
 }
