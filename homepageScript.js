@@ -29,8 +29,8 @@ function editUser(button){
 		$(button).val('Save');
 		$(button).html('Save');
 		console.log($("#"+rowId).children().children()[0].readOnly);
-		$("#"+rowId).children().children().readOnly = false; 
-		$("#"+rowId).children().children().css({ "border": "1px solid #ced4da", "background-color":"rgb(24, 26, 27)"  });
+		$("#"+rowId).children().children()[0].readOnly = false; 
+		$("#"+rowId).children().children()[0].css({ "border": "1px solid #ced4da", "background-color":"#ddd"  });
 	}
 }
 
