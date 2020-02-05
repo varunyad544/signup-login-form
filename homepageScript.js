@@ -3,7 +3,7 @@ function renderAllUsersData(data){
 	for(key in data){
 		userTable+= "<tr><td>" + key + "</td><td>" + data[key]['username'] + "</td><td>" + data[key]['phone'] + 
 			"</td><td>" + data[key]['email'] + "</td><td><button class='edit-btn' onclick='editUser' value='Edit'>Edit</button>"+
-			"<button class='delete-btn' onclick='deleteUser' value='Delete'>Delete</button></td></tr>";
+			"<button type='button' class='btn btn-danger delete-btn' onclick='deleteUser' value='Delete'>Delete</button></td></tr>";
 	}
 	userTable+= "</table>";
 	$('#data').append(userTable);
