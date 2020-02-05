@@ -26,17 +26,16 @@ function editUser(button){
 	
 	if($(button).val()=='Edit'){
 		$(button).val('Save');
+		
 	}
 }
 
 function setModal(e){
 	deleteUserRowId = $(e).parent().parent().attr('id');
+	deleteUserId = $(e).parent().parent().children('td.first').textContent();
+	console.log(deleteUserId);
 	var x = $("#"+deleteUserRowId).find("input");
-	console.log(x[1]['value']);
-	    console.log(x[1]);
-	console.log(typeof x[1]);
-	deleteUsername = x[1].value();
-	deleteUserId = x[0].textContent();
+	deleteUsername = x[1]['value'];
 	$('.modal-title').text('Delete '+ deleteUsername);
 }
 
