@@ -34,7 +34,7 @@ function setModal(e){
 	var x = $("#"+deleteUserRowId).children();
 	console.log(deleteUserRowId);
 	console.log(x);
-	console.log(x[0]);
+	console.log(x[1]);
 	deleteUsername = x[1].textContent;
 	deleteUserId = x[0].textContent;
 	$('.modal-title').text('Delete '+ deleteUsername);
