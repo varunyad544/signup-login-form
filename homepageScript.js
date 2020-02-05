@@ -26,6 +26,7 @@ function editUser(button){
 	editUserRowId = $(button).parent().parent().attr('id');
 	console.log($(button).val());
 	if($(button).val()=='Edit'){
+		console.log('here');
 		$(button).val('Save');
 		$(button).html('Save');
 		for(var i=0;i<3;i++){
