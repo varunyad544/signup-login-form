@@ -31,7 +31,7 @@ function setModal(e){
 }
 
 function deleteUser(){
-	/*$.ajax({
+	$.ajax({
 		type: 'POST',
 		async: false,
 		url: 'http://34.66.9.69/signup-login-form/deleteUser.php',
@@ -48,6 +48,5 @@ function deleteUser(){
 		error: function(error){
 			console.log(error);
 		}
-	});*/
-	$("#"+deleteUserRowId).remove();
+	});
 }
