@@ -34,14 +34,6 @@ function editUser(e){
 			$("#"+editUserRowId).children().children()[i].style.border = "1px solid #ced4da";	
 		}
 	}
-	if($(e).val()=='Save'){
-		$(e).val('Edit');
-		$(e).html('Edit');
-		for(var i=0;i<3;i++){
-			$("#"+editUserRowId).children().children()[i].readOnly = true; 
-			$("#"+editUserRowId).children().children()[i].style.border = "none";	
-		}
-	}
 }
 
 function setModal(e){
