@@ -19,6 +19,8 @@ if($userId!=""){
 	} else {
     		
 	}
+	
+$conn->close();
 } 
 
 ?>
