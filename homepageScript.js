@@ -39,6 +39,10 @@ function deleteUser(){
 			userId: deleteUserId;	
 		}
 		success: function(response){
+			if(response==1{
+				$('.modal-body').empty();
+				$('.modal-body').text('User deleted sucessfully');
+			}
 		},
 		error: function(error){
 			console.log(error);
