@@ -37,7 +37,7 @@ function deleteUser(){
 		url: 'http://34.66.9.69/signup-login-form/deleteUser.php',
 		data: {
 			userId: deleteUserId;	
-		}
+		},
 		success: function(response){
 			if(response==1{
 				$('.modal-body').empty();
