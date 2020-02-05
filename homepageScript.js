@@ -1,5 +1,6 @@
 	var deleteUserRowId='';
 	var deleteUsername='';
+	var deleteUserId='';
 	
 	function renderAllUsersData(data){
 	var userTable = "<table><tr><th>User ID</th><th>Username</th><th>Phone</th><th>Email</th><th></th></tr>";
@@ -25,8 +26,22 @@ function setModal(e){
 	deleteUserRowId = $(e).parent().parent().attr('id');
 	var x = $("#"+deleteUserRowId).children();
 	deleteUsername = x[1].textContent;
+	deleteUserId = x[0].textContent;
 	$('.modal-title').text('Delete '+ deleteUsername);
 }
 
 function deleteUser(){
+	$.ajax({
+		type: 'POST',
+		async: false,
+		url: 'http://34.66.9.69/signup-login-form/deleteUser.php',
+		data: {
+			userId: deleteUserId;	
+		}
+		success: function(response){
+		},
+		error: function(error){
+			console.log(error);
+		}
+	});
 }
