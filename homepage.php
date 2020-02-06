@@ -1,6 +1,6 @@
 <?php
 session_start();
-echo " <script> console.log(session variable check: '" + $_SESSION['username'] + "'); </script> ";
+echo " <script> console.log('" + $_SESSION["username"] + "') </script> ";
 if(!isset($_SESSION['username'])){
 	header("Location: http://34.66.9.69/signup-login-form/index.php");
 }
