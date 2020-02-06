@@ -1,6 +1,5 @@
 <?php
 session_start();
-echo " <script> console.log('" . $_SESSION["username"] . "') </script> ";
 if(!isset($_SESSION['username'])){
 	header("Location: http://34.66.9.69/signup-login-form/index.php");
 }
@@ -71,14 +70,6 @@ if(!isset($_SESSION['username'])){
 				console.log(error);
 			}
 		});	
-		}
-		
-		function signout(){
-			<?php
-				session_unset();
-				session_destroy();
-			?>
-			window.location.replace("http://34.66.9.69/signup-login-form/index.php");
 		}
 	</script>
 </body>
