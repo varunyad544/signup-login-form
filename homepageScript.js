@@ -95,3 +95,12 @@ function deleteUser(){
 		}
 	});
 }
+
+function signout(){
+	$.ajax({
+		url: 'http://34.66.9.69/signup-login-form/signout.php',
+		success: function(response){
+			window.location.replace("http://34.66.9.69/signup-login-form/index.php");
+		}
+	});
+}
