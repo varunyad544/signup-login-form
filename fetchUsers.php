@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!isset($_SESSION['username'])){
+	header("Location: http://34.66.9.69/signup-login-form/index.php");
+}
+
 $servername = "34.66.9.69";
 $dbusername = "varun1";
 $dbpassword = "Varun@123";
