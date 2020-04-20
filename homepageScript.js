@@ -44,7 +44,7 @@ function editUser(e){
 		$.ajax({
 		type: 'POST',
 		async: false,
-		url: 'http://34.66.9.69/signup-login-form/updateUser.php',
+		url: 'http://104.154.144.118/signup-login-form/updateUser.php',
 		data: {
 			userId: editUserId,
 			username: newUsername,
@@ -79,7 +79,7 @@ function deleteUser(){
 	$.ajax({
 		type: 'POST',
 		async: false,
-		url: 'http://34.66.9.69/signup-login-form/deleteUser.php',
+		url: 'http://104.154.144.118/signup-login-form/deleteUser.php',
 		data: {
 			userId: deleteUserId	
 		},
@@ -98,9 +98,9 @@ function deleteUser(){
 
 function signout(){
 	$.ajax({
-		url: 'http://34.66.9.69/signup-login-form/signout.php',
+		url: 'http://104.154.144.118/signup-login-form/signout.php',
 		success: function(response){
-			window.location.replace("http://34.66.9.69/signup-login-form/index.php");
+			window.location.replace("http://104.154.144.118/signup-login-form/index.php");
 		}
 	});
 }
