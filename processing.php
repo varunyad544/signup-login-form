@@ -10,8 +10,8 @@ $phone = $_POST["phone"];
 $email = $_POST["email"];
 $pass = $_POST["pass"];
 
-$servername = "34.66.9.69";
-$dbusername = "varun1";
+$servername = "104.154.144.118";
+$dbusername = "root";
 $dbpassword = "Varun@123";
 $dbname = "mydb";
 
