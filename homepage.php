@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-	header("Location: http://34.66.9.69/signup-login-form/index.php");
+	header("Location: http://104.154.144.118/signup-login-form/index.php");
 }
 ?>
 <!Doctype HTML>
@@ -61,7 +61,7 @@ if(!isset($_SESSION['username'])){
 			$.ajax({
 			type: 'POST',
 			async: false,
-			url: 'http://34.66.9.69/signup-login-form/fetchUsers.php',
+			url: 'http://104.154.144.118/signup-login-form/fetchUsers.php',
 			success: function(response){
 				response = JSON.parse(response);
 				renderAllUsersData(response);
