@@ -130,7 +130,7 @@ function submitted(){
 		$.ajax({
 			type: 'POST',
 			async: false,
-			url: 'http://34.66.9.69/signup-login-form/processing.php',
+			url: 'http://104.154.144.118/signup-login-form/processing.php',
 			data: {username: usernameElement.value,
 					phone: phoneElement.value,
 					email: emailElement.value,
@@ -172,13 +172,13 @@ function login(){
 		$.ajax({
 			type: 'POST',
 			async: false,
-			url: 'http://34.66.9.69/signup-login-form/login.php',
+			url: 'http://104.154.144.118/signup-login-form/login.php',
 			data: {user: username,
 				pass: pass},
 			success: function(response){
 				console.log(response);
 				if(response==1){
-					window.location.replace("http://34.66.9.69/signup-login-form/homepage.php");
+					window.location.replace("http://104.154.144.118/signup-login-form/homepage.php");
 				}else{
 					alert('invalid');	
 				}
