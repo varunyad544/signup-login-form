@@ -1,11 +1,11 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-	header("Location: http://34.66.9.69/signup-login-form/index.php");
+	header("Location: http://104.154.144.118/signup-login-form/index.php");
 }
 
-$servername = "34.66.9.69";
-$dbusername = "varun1";
+$servername = "104.154.144.118";
+$dbusername = "root";
 $dbpassword = "Varun@123";
 $dbname = "mydb";
 
